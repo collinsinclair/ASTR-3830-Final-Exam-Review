@@ -813,6 +813,44 @@ See Early Universe section below.
     \includegraphics[height = 0.4\textwidth]{images/components.png}
 \end{center}
 \subsection{Distances (Observational Cosmology)}
+For use in upcoming formulas, we define
+\begin{equation*}
+    I(z) \equiv \int_0^z \frac{dz'}{\sqrt{\Omega_{m,0} (1+z')^3 + \Omega_{rel,0} (1+z')^4 + \Omega_{\Lambda,0} + (1 - \Omega_0)(1 + z')^2}} \tag{C\&O 29.168}
+\end{equation*}
+and
+\begin{center}
+    \includegraphics[width = 0.6\textwidth]{images/s_of_z.png}
+\end{center}
+\begin{itemize}
+    \item Proper distance
+          \begin{itemize}
+              \item Measuring the distance between two locations at the exact moment of time
+              \item How far it is today, not when light was emitted
+              \item Obtain an equation for proper distance by solving the Robertson-Walker metric, which gives the space-time interval between two events in a homogeneous isotropic universe
+              \item The present proper distance is
+                    \begin{equation*}
+                        d_{p,0} = \frac{c}{H_0} I(z) \tag{C\&O 29.169}
+                    \end{equation*}
+                    or, for $z \ll 1$,
+                    \begin{equation*}
+                        d_{p,0} \simeq \frac{c z}{H_0} \left[ 1 - \frac{1}{2} (1 + q_0) z \right] \tag{C\&O 29.181}
+                    \end{equation*}
+          \end{itemize}
+    \item Astronomers frequently translate a measured redshift $z$ into the radial velocity a galaxy would have \emph{as if} if had a peculiar velocity (moving through space) instead of its actual recessional velocity (moving along with expanding space) (relativistic Hubble distance):
+          \begin{equation*}
+              d \simeq \frac{c}{H_0} \frac{(z+1)^2 - 1}{(z+1)^2 + 1} \tag{C\&O 27.7}
+          \end{equation*}
+          or, if $z \ll 1$, we have the non-relativistic Hubble distance:
+          \begin{equation*}
+              d = \frac{c z}{H_0}
+          \end{equation*}
+    \item The Luminosity Distance is defined as
+          \begin{equation*}
+              d_L^2 \equiv \frac{L}{4 \pi F} \tag{C\&O 29.182}
+          \end{equation*}
+          so for the 
+    \item
+\end{itemize}
 
 \backmatter
 \chapter{Topic-Lecture Index}
