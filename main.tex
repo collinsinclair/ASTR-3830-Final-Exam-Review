@@ -1,0 +1,508 @@
+\documentclass{book}
+\usepackage[letterpaper, total={6.5in,9in}]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{/Users/collinsinclair/Documents/School/2021/sp21/ASTR 3830/finalExam/images}
+\hypersetup{
+    colorlinks,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue
+}
+\title{ASTR 3830: Astrophysics 2 – Galactic and Extragalactic \\
+Final Exam Review Guide}
+\author{The Students of ASTR 3830}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Exam 1 Content}
+\section{The Milky Way (C\&O Chapter 24)}
+\subsection{Determining Morphology of the Milky Way}
+\subsubsection{Magnitudes}
+\begin{itemize}
+    \item M: Absolute magnitude, magnitude as seen at 10 pc?
+    \item m: Apparent magnitude, magnitude as seen at observer’s distance
+    \item Small magnitude = brighter
+    \item Big mag = dimmer
+    \item It’s backwards
+    \item Pro tip: when looking at a plot, take your time to orient yourself (which is left, which is right, up, down, brighter, dimmer, more massive, less massive, etc) because astronomers are out of their minds and don’t make graphs like normal people.
+\end{itemize}
+The Milky Way is a SBb-SBc bar spiral.
+\subsection{Filter Systems}
+\begin{itemize}
+    \item F(\#\#\#) - filter (centered at) note to watch out for inferred numbers
+          \begin{itemize}
+              \item Example: U365
+          \end{itemize}
+    \item Standard UBV System (Johnson system):
+          \begin{itemize}
+              \item U - ultraviolet centered at 365 nm
+              \item B - blue centered at 440 nm
+              \item V - visual centered at 550 nm
+          \end{itemize}
+    \item Extension: UBVRI
+          \begin{itemize}
+              \item R - red
+              \item I - Infrared
+          \end{itemize}
+\end{itemize}
+\begin{center}
+    \includegraphics[height = 0.45\textwidth]{images/emspectrum.png}
+\end{center}
+\subsection{Differential Star Count}
+\begin{itemize}
+    \item Counts the number of stars with an absolute magnitude between $M$ and $M = dM$ that are found within a solid angle $\Omega$ and have apparent magnitudes in the range between $m$ and $m  + dm$:
+          \begin{equation*}
+              A_M (M, S, \Omega, m)\ dM\ dm \equiv \frac{d\bar{N}_M (M, S, \Omega, m)}{dm}\ dM\ dm \tag{C\&O 24.4}
+          \end{equation*}
+    \item In special case where we assume no interstellar extinction ($A=0$) and infinite universe of uniform stellar density (i.e. $n_M(M, S, \Omega, r) = n_M(M, S) = $ constant),
+          \begin{align*}
+              A_M (M, S, \Omega, m) & = \frac{d\bar{N}_m (M, S, \Omega, m)}{dm}                       \\
+                                    & = \frac{\ln 10}{5} \Omega n_m (M, S) 10^{3(m - M +5)/5}         \\
+                                    & = \frac{3 \ln 10}{5} \bar{N}_M(M, S, \Omega, r) \tag{C\&O 24.5}
+          \end{align*}
+\end{itemize}
+\subsection{Integrated Star Count}
+\begin{itemize}
+    \item Counts the total number of stars with absolute magnitudes in the range $M$ to $M + dM$ that appear brighter than the limiting magnitude, $m$ (replaces the limiting distance $r$ - see C\&O 24.1):
+          \begin{equation*}
+              n(S, \Omega, r) = \int_{- \infty}^\infty n_M (M, S, \Omega, r)\ dM \tag{C\&O 24.2}
+          \end{equation*}
+          where $n_M (M, S, \Omega, r)\ dM$ is the number density of stars with attribute $S$ that lie within a solid angle $\Omega$ in a specific direction.
+    \item In the special case where we assume no interstellar extinction ($A=0$) and infinite universe of uniform stellar density (i.e. $n_M(M, S, \Omega, r) = n_M(M, S) = $ constant),
+          \begin{align*}
+              \bar{N}_M (M, S, \Omega, m) & = \frac{\Omega}{3} n_M (M, S) 10^{3 (m - M + 5)/5}                        \\
+                                          & = \frac{\Omega}{3} n_M (M, S) \exp\left( \ln 10^{3 (m - M + 5)/5} \right) \\
+                                          & = \frac{\Omega}{3} n_M (M, S) e^{[3 (m - M + 5)/5]\ln 10}
+          \end{align*}
+\end{itemize}
+\subsection{Obscuration}
+\begin{itemize}
+    \item Use distance to solve for extinction $A_\lambda$:
+          \begin{equation*}
+              d = 10^{(m_\lambda - M_\lambda - A_\lambda + 5)/5} \implies A_\lambda = m_\lambda - M_\lambda + 5 - 5 \log_{10} d \tag{C\&O 24.1}
+          \end{equation*}
+    \item Observe using infrared (longer wavelengths) to penetrate dust
+\end{itemize}
+\subsection{Milky Way Components}
+\begin{center}
+    \includegraphics[height=\textwidth]{images/co_table24_1.png}
+\end{center}
+\subsection{Milky Way Kinematics}
+\begin{itemize}
+    \item Does not follow Keplerian model, Flat velocity curve
+    \item Density wave theory: explains the winding problem and how stars move in and out of the spiral arms, the spiral arms originate from quasi-static density waves -- traffic build up example. Each star has its tilted stellar orbits
+    \item Perigalacticon/Apogalacticon calculation
+
+\end{itemize}
+\subsection{Galaxy Rotation Curves}
+\begin{itemize}
+    \item Doesn’t follow Keplerian model
+    \item Flattens out at higher radii, follows Keplerian at smaller radii
+    \item Rotation curve is determined by the mass enclosed (light matter and dark matter)
+    \item Inner region (up to $\sim 5\ kpc$), density of stars goes as $\sim 1/r$, velocity goes as $\sim \sqrt{2}$
+    \item Outer region, need density go as $\sim 1/r^2$ to create flat rotation curve, velocity goes as $\sim 1 / \sqrt{r}$
+          \begin{itemize}
+              \item  $M_r$ becomes constant
+          \end{itemize}
+\end{itemize}
+\subsection{Evidence for Dark Matter}
+\begin{itemize}
+    \item It is not gas. Hot gas would have emission lines, cold gas would have absorption lines
+    \item It is not asteroids, rocks or dust: there isn’t enough
+    \item Flat rotation curves
+    \item Mass-to-light ratio: the ratio between the measured luminosity and the estimated mass. It does not account for the rotation of the stars.
+    \item Gravitational lensing
+\end{itemize}
+\subsection{MACHOs, WIMPs}
+\begin{itemize}
+    \item MACHO: massive compact halo objects: brown dwarfs, white dwarfs, neutron stars, black holes, etc.
+    \item WIMPs: weakly interacting massive particles (neutrinos)
+    \item Both possible explanations for dark matter
+    \item Does not explain all the mass expected
+\end{itemize}
+\subsection{NFW Profile}
+\begin{itemize}
+    \item NFW density profile
+          \begin{equation*}
+              \rho_{NFW} (r) = \frac{\rho_0}{(r/a)(1+r/a)^2} \tag{C\&O 24.52}
+          \end{equation*}
+    \item Averages out to be $1/r^2$ over much of the halo to explain that velocity = constant on the rotation curves
+    \item Shallow near the center $(\sim 1/r$) near the center
+    \item Steeper ($\sim 1/r^3$) near the edge of the halo
+    \item Total mass contained within NFW profile is still not bound (like problem 4 in homework)
+    \item For galaxies, $a \sim 10-30\ kpc$ (scale radius)
+\end{itemize}
+\subsection{Galactic Center Observations}
+\begin{itemize}
+    \item $1\ m$ wavelength $\implies$ radio
+    \item Adaptive optics: Keck Telescope using adaptive optics (AO) to observe $Sgr\ A^*$
+\end{itemize}
+\subsection{Evidence for a SMBH in the Galactic Center}
+\begin{itemize}
+    \item Rotation of S2 and other stars around the center of the galaxy. (Seen through the microwave)
+    \item No other explanation besides a SMBH.
+    \item X-ray emission.
+    \item Used orbits of stars to calculate mass of center $= 3.7 \pm 0.2 \times 10^6\ M_\odot$
+\end{itemize}
+\subsection{Virial Theorem}
+\begin{equation*}
+    \langle E \rangle = \langle K \rangle + \langle U \rangle
+\end{equation*}
+\begin{itemize}
+    \item See Lecture 3, Section 2.4 of C\&O
+    \item $-2 \langle K \rangle = \langle U \rangle$
+          \begin{itemize}
+              \item Note: This form applies to special case where galaxy is in equilibrium and gravitationally bound
+          \end{itemize}
+\end{itemize}
+\subsection{Sgr A$^*$ Luminosity Function}
+\begin{itemize}
+    \item Luminosity comes from accretion
+    \item Using the virial theorem: $\langle E \rangle = \frac{1}{2} \langle U \rangle$
+    \item Luminosity is $dE/dt$
+\end{itemize}
+\section{The Nature of Galaxies (C\&O Chapter 25)}
+\subsection{The Great Debate Over Spiral Nebulae}
+\begin{itemize}
+    \item Side 1) The mysterious “spiral nebulae” are nebulae within our own galaxy
+    \item Side 2) They are outside our galaxy - ``island universes''
+    \item Shapley: supported idea of nebulae being in our Galaxy - argued using apparent magnitudes of novae - argued that if the disk of Andromeda were as large as the Milky Way, then its angular size in the sky would imply a distance to the nebula so large that luminosities of novae would be greater than those found in Milky Way. Also argued the points of Maanen: proper-motion measurements of M101 suggest angular rotation of $0.02"\ yr^{-1}$, if diameter similar to Milky Way then why rotational speed not larger?
+    \item Curtis: supported the idea of spiral nebulae Being outside our Galaxy - argued that the novae observed must be at least 150kpc away in order to have intrinsic brightnesses comparable to those in the Milky Way. Also argued that the large radial velocities measured for spiral nebulae indicated they could not remain gravitationally bound within a Kapteyn-model Milky Way. (Lecture 1)
+\end{itemize}
+Curtis was proven correct when Hubble detected Cepheid variable stars in M31. Using apparent magnitudes to determine absolute magnitudes, and then using the period-luminosity relation:
+\begin{equation*}
+    M_{\langle V \rangle} = -2.81 \log_{10}(P_d) - 1.43 \tag{C\&O 14.1}
+\end{equation*}
+where $M_{\langle V \rangle}$ is the average absolute $V$ magnitude and $P_d$ is the pulsation period in units of days.
+
+Hubble was able to approximately calculate the distance to Andromeda to be outside the Milky Way Galaxy.
+\subsection{Galaxy Morphologies, Hubble Classification Scheme}
+\begin{center}
+    \includegraphics[height = 0.4 \textwidth]{images/hubble_class.png}
+\end{center}
+\begin{itemize}
+    \item 3 types: ellipticals, spirals, irregulars
+    \item E0 $\to$ E7: greater ellipticity
+    \item S0: disk, bulge, no arms
+    \item Sa $\to$ Sc: lower bulge-to-disk size and luminosity ratios, spiral arms less tightly wound
+    \item NOT an evolutionary sequence
+    \item Observed ellipticity: $\epsilon = 1 - \beta / \alpha$
+\end{itemize}
+\begin{center}
+    \includegraphics[height = 0.4 \textwidth]{images/ellipse.png}
+\end{center}
+\subsection{Galaxy Surface Brightness, Sérsic Profile}
+\begin{itemize}
+    \item A galaxy's surface brightness $\mu$ is the amount of flux from the galaxy per square arcsecond on the sky
+    \item Calculate luminosity, then total flux from all stars
+    \item Surface brightness is unrelated to distance
+    \item Observer units: $\mu$ units: mag arcsec$^{-2}$
+    \item Theorist units: $I$ units: $L_\odot\ pc^{-2}$
+    \item K-correction: de-redshifted
+    \item de Vaucouleurs Profile: surface brightness $I \sim r^{1/4}$ for spiral galaxy bulges and elliptical galaxies:
+          \begin{equation*}
+              \log_{10} \left[ \frac{I(r)}{I_e} \right] = -3.3307 \left[ \left( \frac{r}{r_e} \right)^{1/4} - 1 \right] \tag{C\&O 24.13}
+          \end{equation*}
+          where $I$ is the surface brightness measured in units of $L_\odot\ pc^{-2}$, $r_e$ is a reference radius (called the effective radius), and $I_e$ is the surface brightness at $r_e$. $r_e$ is defined to be that radius within which one-half of the bulge's light is emitted.
+          \begin{itemize}
+              \item \textbf{Note}: the equation above uses $I$ as the surface brightness which is consistent with C\&O, but in class we have used $\mu$ as the surface brightness.
+          \end{itemize}
+\end{itemize}
+\subsection{How to Measure Rotation in Other Galaxies}
+\begin{itemize}
+    \item Neutral H in the interstellar medium
+    \item The spin flip transition of HI emits photons of wavelength 21 cm
+\end{itemize}
+\begin{center}
+    \includegraphics[height = 0.5 \textwidth]{images/rotation.png}
+\end{center}
+(Art courtesy of James l'Artiste.) Find $v_{max}$ with right peak - middle or left peak + middle
+\subsection{Tully-Fisher Relation}
+\begin{itemize}
+    \item Tully and Fisher studied 21-cm emission lines in spiral galaxies and found that the absolute magnitude is related to the rotation
+    \item $v_{max}$ is easiest to find, so measure $v_{max}$, use Tully-Fisher to get $M$ (absolute magnitude), and then distance - you also need $m$ (apparent magnitude)
+\end{itemize}
+\begin{center}
+    \includegraphics[width = \textwidth]{images/tullyfisher.png}
+\end{center}
+\subsection{Types of Spiral Arms}
+\begin{itemize}
+    \item Grand-design spiral: 2 large arms - 10\% of the spiral galaxy
+    \item Multiple-arm: $>2$ large arms - 60\% of the spiral galaxy
+    \item Flocculent spiral: Not well defined arms - 30\%
+\end{itemize}
+\subsection{Winding Problem, Density Wave Theory}
+\begin{itemize}
+    \item Traffic jam produced by slow moving truck (density wave) while cars (stars) slow down while moving around the truck.
+    \item If we assume that all the stars in the galaxy stay together as they orbit, the spiral arms would wind up until we eventually have no spiral arms.
+    \item This assumption is wrong, instead the stars constantly speed up or slow down as they enter and exit the spiral arms.
+\end{itemize}
+\begin{center}
+    \includegraphics[width =0.7\textwidth]{images/winding.jpg}
+\end{center}
+\chapter{Exam 2 Content}
+\section{The Nature of Galaxies}
+\subsection{Spiral Galaxies versus Elliptical Galaxies: Major Differences}
+\subsubsection{Spiral Galaxies}
+\begin{itemize}
+    \item Late-type in Hubble classification scheme
+    \item Blue (which means less star formation!)
+    \item Generally less luminous than ellipticals
+    \item More abundant in the field
+    \item Mass: $10^9$ to $10^{12} M_\odot$ (less massive on average)
+\end{itemize}
+\subsubsection{Elliptical Galaxies}
+\begin{itemize}
+    \item Early-type in Hubble classification scheme
+    \item ``Red and dead'' (not forming new stars)
+    \item Generally more luminous (brighter)
+    \item More abundant in clusters
+    \item Mass: $10^9$ to $10^{14} M_\odot$ (more massive on average)
+\end{itemize}
+\subsubsection{Bonus: Irrigular Galaxies!}
+\begin{itemize}
+    \item Sort of in between
+    \item Usually the result of mergers
+\end{itemize}
+\subsection{Stellar Velocity Dispersion}
+\begin{itemize}
+    \item ``Statistical dispersion of stellar velocities around the man stellar velocity in a galaxy''
+    \item Derived from the Virial Theorem to derive mass: $-2\langle K \rangle - \langle U \rangle$
+          \begin{itemize}
+              \item Assuming spherical distribution, $\langle v_r^2 \rangle = \sigma_r^2$ where $\sigma_r$ is the ``radial velocity dispersion''
+          \end{itemize}
+    \item Side note: \textbf{virial mass} $M \approx 5 R \sigma_r^2 / G$ can be used to calculate the total mass of an elliptical galaxy or the bulge of a spiral galaxy but not the whole spiral galaxy
+    \item Measure stellar absorption lines, add them all up to make a galaxy spectrum and measure the velocity dispersion to get the total mass of a galaxy. The wider the absorption line, the more massive the galaxy.
+\end{itemize}
+\subsection{Faber-Jackson Relation}
+\begin{itemize}
+    \item Correlation between central velocity dispersion and luminosity
+    \item Derived from the virial theorem
+    \item For elliptical galaxies and spiral bulges (note: Tully-Fisher was for spiral galaxies)
+    \item Brighter galaxies have larger velocity dispersions
+    \item $L \propto \sigma^4 \propto L_\odot 10^{M_\odot/2.5}10^{-M/2.5}$ where $\sigma$ is the velocity dispersion and $L$ is the luminosity
+    \item $\log (\sigma_r) \propto - M$
+\end{itemize}
+\subsection{The Fundamental Plane}
+\begin{itemize}
+    \item $\sigma$, luminosity, and size are the fundamental parameters of an elliptical galaxy or spherical bulge
+    \item We often see 2D projections of the fundamental plane (i.e. Faber-Jackson relation)
+\end{itemize}
+\subsection{Galaxy Luminosity Function}
+\begin{itemize}
+    \item Relative number of galaxies at each luminosity
+    \item Number density of galaxies in a particular sample that have luminosities between $L$ and $L + dL$: $$\Phi (L)\ dL = \frac{\sigma^*}{L^*} \left( \frac{L}{L^*}\right)^\alpha e^{-L/L^*}\ dL$$
+    \item When $L \ll L^*$, $L \to 0$
+    \item In magnitudes: $$\Phi(M) dM \approx 10^{0.4 (\alpha + 1) M}\exp\left( -10^{0.4(m^* - M)} \right)\ dM$$
+    \item The ``knee'' is the turnover point where $\alpha = 1$
+    \item To measure the luminosity function:
+          \begin{enumerate}
+              \item Measure the apparent magnitudes for all galaxies in the sample
+              \item Convert to absolute magnitudes
+              \item Calculate K-correction
+              \item Count the number of galaxies in each K-corrected absolute magnitude bin, then divide te number of galaxies by the volume surveyed.
+          \end{enumerate}
+          \centering{\includegraphics[height=0.5\textwidth]{images/luminosity_function.png}}
+\end{itemize}
+\subsection{The K-Correction}
+\begin{itemize}
+    \item De-redshift
+    \item K-correction ``corrects'' for the fact that sources observed at different redshifts are compared with each other at different rest wavelength bands
+    \item Calculating the absolute magnitude of galaxies requires making corrections to their observed apparent magnitudes if we are to properly account for the effect of extinction, both within the Milky Way and within the target galaxy.
+\end{itemize}
+\section{Galactic Evolution}
+\subsection{Major versus Minor Galaxy Mergers}
+\begin{itemize}
+    \item Major merger: mass ratio of merging galaxies is between 3:1 and 1:1
+    \item Minor merger: mass ratio of merging galaxies is below 3:1
+\end{itemize}
+\subsection{Tidal Stripping and Tidal Tails}
+\begin{itemize}
+    \item Tidal stripping: $$F = \frac{2 G M m R}{r^3}$$ where $F$ is the tidal force on the galaxy of mass $m$, has radius $R$, and is a distance $r$ from a galaxy with mass $M$.
+    \item Tidal tails are a result of tidal stripping as the tidal forces unbind gas and stars from galaxies
+    \item The Milky Way is currently stripping material from the Large and Small Magellanic Clouds!
+\end{itemize}
+\subsection{Dynamical Friction}
+\begin{itemize}
+    \item As an object of mass $M$ moves through a galaxy, a high-density ``wake'' forms behind it. This wake exerts net gravitational force on $M$ that opposes its forward motion, slowing it down.
+          \begin{itemize}
+              \item This is the reason for mergers, otherwise objects would just pass through each other.
+          \end{itemize}
+    \item Force due to dynamical friction is given by $$F_d = - 4 \pi \ln(\Lambda) \left( \frac{G^2 M^2 \rho}{v^2} \right)$$ where $\Lambda = b_{max}/m_{min}$ (depends on the material/density of material the galaxy is moving through) and $\rho = n m$
+    \item In class, we assumed the density of the dark matter halo to be $$\rho (r) = \frac{v^2}{4 \pi G r^2}$$
+\end{itemize}
+\subsection{Initial Mass Function}
+\begin{itemize}
+    \item Only gives distribution of stellar masses immediately after stars are born (doesn't give mass distribution of, for example, stars in the Milky Way today).
+    \item $$\xi (M) = \frac{dN}{dM} = C M^{-(1 + x)}$$ where $N$ is the number of stars, $M$ is the mass of the stars, and $C$ is a normalization constant. For stars with masses in the range $7 M_\odot < M < 35 M_\odot$, $x = 1.8$.
+    \item The above leads directly to $$N = \int_0^\infty \xi (M)\ dM$$ for \emph{all} masses (change bounds for given range).
+
+          \centering{\includegraphics[height=0.5\textwidth]{images/imf.png}}
+\end{itemize}
+\subsection{Eggen, Lynden-Bell, and Sandage Collapse Model}
+\begin{itemize}
+    \item Galaxy forms all at once from direct collapse of a proto-galactic nebula
+    \item ``Top-down'' model
+\end{itemize}
+\subsection{Hierarchical Merger Model}
+\begin{itemize}
+    \item Stars in the stellar halo were a part of stellar clusters in initial proto-galaxies (some clusters survived to become globular clusters)
+    \item Proto-galactic gas clouds collided and settled toward the center, forming a thick disk
+    \item Gas continued to settle onto the midplane, forming a thin disk
+    \item Stripped gas from satellite galaxies in recent mergers settled toward the galactic center accounting for the young stars in the bulge
+    \item ``Bottom-up'' model: small galaxies merge to larger galaxies
+    \item Future gas for bulge: tidal stripping of LMC and SMC
+\end{itemize}
+\subsubsection{Galaxy Structure}
+\begin{enumerate}
+    \item \textbf{Globular Clusers and Stellar Halos:} stellar clusters formed in proto-galaxies and merged to form galaxies. Some stars tidally got stipped away to become stars of stellar halo and some stellar clusters survived to become globular clusters.
+    \item \textbf{Thick Disk:} proto-galactic gas clouds collided and settled towards the center of the galaxy and then cooled to form new stars
+    \item \textbf{Thin Disk:} After the thick disk formation, gas continued to settle onto a galactic midplane and formed new stars
+    \item \textbf{Young Stars in the Bulge:} recent mergers with satellite galaxies stripped gas and settled towards the galactic center
+    \item \textbf{Future Gas for the Bulge:} tidal stripping of LMC and SMC
+\end{enumerate}
+\subsubsection{Morphology-Density Relation}
+Due to more mergers occurring in dense environments (clusters) and the transformation of spirals into ellipticals during mergers, elliptical galaxies are more abundant in clusters.
+\subsubsection{Butcher-Oemler Effect}
+\begin{itemize}
+    \item Galaxies becoming redder over time
+    \item If a $z = 0$ galaxy cluster has 40\% ellipticals, a $z = 2$ galaxy cluster has $< 40\%$ ellipticals and more blue spirals. Note: redshift of 2 corresponds to most merger events
+
+          \centering{\includegraphics[height=0.5\textwidth]{images/boe.png}}
+\end{itemize}
+\section{The Structure of the Universe}
+
+\subsection{The Cosmological Distance Ladder}
+
+\begin{center}
+    {\includegraphics[height=0.5\textwidth]{images/stuct_uni.png}}
+\end{center}
+
+\subsubsection{Parallax}
+\begin{itemize}
+    \item Only out to one kiloparsec
+
+          \begin{center}
+              {\includegraphics[height=0.5\textwidth]{images/parallax.png}}
+          \end{center}
+
+\end{itemize}
+\subsubsection{Cepheid Variable Stars}
+\begin{itemize}
+    \item Out to 30 Mpc
+    \item Cepheids pulsate rapidly and we can measure the period of pulsations
+    \item Period-luminosity relationship for Cepheids: $$M_V = -3.53 \log (P_d) - 2.13 + 2.13(B-V)$$ where $M_V$ is the absolute visual magnitude, $P_d$ is the period in days, and $B - V$ is the color index.
+    \item What can we find?
+          \begin{itemize}
+              \item Observe $P_d$ and $B - V$, infer $M_V$
+              \item Observe $m_V$, use $M_V$ from above to get distance ($d = 10^{(m - M + 5)/5}$ parsecs)
+          \end{itemize}
+    \item Notes: Blue Cepheids are brighter, longer period means brighter
+\end{itemize}
+\subsubsection{Tully-Fisher Relation}
+\begin{itemize}
+    \item Out to 100 Mpc
+    \item Only works for spiral galaxies
+    \item What can we find?
+          \begin{itemize}
+              \item Observe $v_{max}$ (distance between center and peak of graph), infer $M_B$
+              \item Observe $m_B$, infer distance
+          \end{itemize}
+\end{itemize}
+\subsubsection{Supernovae}
+\begin{itemize}
+    \item Out to $> 1000 Mpc$
+    \item Measure the size of a nearby supernova's photosphere
+
+          \begin{center}
+              \includegraphics[height=0.5\textwidth]{images/trig_astro.png}
+          \end{center}
+
+    \item Type Ia light curves:
+          \begin{itemize}
+              \item The maximum brightness of a supernova is inversley correlated with the rate of light curve decline (bright supernovae decline more slowly)
+              \item What can we find?
+                    \begin{itemize}
+                        \item Observe rate of decline, infer $M$
+                        \item Observe $m$, combine with peak $M$ to get distance
+                    \end{itemize}
+          \end{itemize}
+\end{itemize}
+\subsubsection{Hubble Flow}
+\begin{itemize}
+    \item Most galaxies exhibit redshifts in their spectra: $v = cs$ for $v \ll c$.
+          \begin{itemize}
+              \item Farther galaxy means larger redshift means moving faster means ``Hubble flow''
+          \end{itemize}
+    \item Hubble's Law: $v = H_0 d$ where $v$ is the galaxy's velocity along the line of sight, $d$ is the distance to the galaxy in Mpc, and $H_0$ is Hubble's constant (current value of 71 km/sec/Mpc - controversial)
+    \item Highest rung on the distance ladder - most galaxies
+          \begin{center}
+              \includegraphics[width=0.5\textwidth]{images/dist_ladd.png}
+          \end{center}
+\end{itemize}
+\subsection{Expanding Universe, Hubble's Law}
+\begin{itemize}
+    \item The further a galaxy is from Earth, the fast it is moving away and the larger its redshift $z$
+    \item For non-relativistic motion: $$z = \frac{\lambda_{obs} - \lambda_{rest}}{\lambda_{rest}} = \frac{v}{c}$$
+    \item For relativistic motion: $$z = \sqrt{\frac{1 + v/c}{1 - v/c}} - 1 \to \frac{v}{c} = \frac{(z+1)^2 - 1}{(z+1)^2 + 1}$$
+    \item Hubble's Law $v = H_0 d$ where $H_0$ is the Hubble constant. $H_0 = 100 h$ km/s/Mpc
+    \item Most galaxies are red-shifted and moving away, but some are blue-shifted, for example, Andromeda (M31)
+\end{itemize}
+\subsection{Peculiar Velocity}
+\begin{itemize}
+    \item A galaxy's own velocity through space (as opposed to recessional velocity which is the velocity of the expanding universe carrying the galaxy along)
+    \item If the recessional velocity is less than the peculiar velocity, the object is coming towards you!
+\end{itemize}
+\subsection{The Age of the Universe}
+\begin{itemize}
+    \item Assume constant rate of expansion
+    \item $t = d/v = d / (H_0 \times d) = 1 / H_0$
+    \item Gives estimate of around 13 billion years which isn't too far off!
+\end{itemize}
+\subsection{Distribution of Galaxies in the Universe}
+\begin{itemize}
+    \item More ellipticals near center of galaxy cluster due to being more dense and more likely for galaxies to merge and form ellipticals
+    \item More likely for spiral galaxies to be on outer edge where mergers less likely
+    \item Spirals more abundant in field, ellipticals more abundant in clusters
+          \begin{center}
+              \includegraphics[height=0.5\textwidth]{images/distro_galax.png}
+          \end{center}
+\end{itemize}
+\subsection{Groups and Cluster}
+\begin{itemize}
+    \item Most galaxies are found in groups or clusters: gravitationally bound associations of galaxies
+    \item Groups have less than 50 members, diameter $1.4 h^{-1}$ Mpc, velocity dispersion 150 km/s, and mass $2 \times 10^{13} h^{-1} M_\odot$.
+    \item Clusters have between 50 and 1000 members (poor to rich, respectively) with diameter $6 h^{-1}$ Mpc, velocity dispersion between 800 and 1000 km/s, and mass $10^{15} M_\odot$.
+          \begin{center}
+              \includegraphics[width=0.5\textwidth]{images/table.png}
+          \end{center}
+    \item Local Group: Milky Way and Andromeda, M33, and Pinwheel galaxy
+    \item Nearest galaxy clusters:
+          \begin{itemize}
+              \item Virgo Cluster: 16 Mpc away, 250 larger galaxies, 2000 smaller galaxies, diameter 3 Mpc
+              \item Coma Cluster: 90 Mpc away, roughly 10000 member galaxies, diameter 6 Mpc
+          \end{itemize}
+    \item There are more elliptical galaxies at the center of a galaxy cluster
+    \item Virial Mass for a galaxy cluster (lecture 12 boardwork): $$M = \frac{5 R \sigma^2}{G}$$
+\end{itemize}
+\subsection{Evidence for Dark Matter from Cluster Masses}
+\begin{itemize}
+    \item Fritz ``Nuclear Goblins Guy'' Zwicky measured the velocity dispersion and estimated the cluster mass
+    \item Compared to the total mass of galaxies in the cluster
+    \item Total mass of galaxies did not account for all the mass in the cluster
+    \item ``Missing mass'' turned out to be dark matter and hot intracluster gas
+\end{itemize}
+\subsection{Intracluster Gas}
+\begin{itemize}
+    \item Roughly 90\% of the baryonic mass of a galaxy cluster is in the form of ionized gas
+    \item Gas radiates via thermal bremsstrahlung: free-free emission of x-ray photons
+    \item Using ideal gas law and HSE, can derive galaxy cluster mass as a function of r entirely from hot intracluster gas quantities: $$M_r = - \frac{k T r}{\mu m_H G} \left( \frac{\partial \ln \rho}{\partial \ln r} + \frac{\partial \ln T}{\partial \ln r}\right)$$ where $\mu$ is a constant.
+    \item To find the total mass, evaluate $M_r (r = R)$.
+    \item The hotter the gas, the more massive the cluster.
+\end{itemize}
+\chapter{Final Exam Content}
+\end{document}
