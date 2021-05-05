@@ -255,4 +255,6 @@ TSWLatexianTemp*
 *.sta
 
 # Collin's Additions
+./.DS_Store
 .DS_Store
+*.DS_Store
