@@ -565,6 +565,7 @@ Due to more mergers occurring in dense environments (clusters) and the transform
 \begin{center}
     \includegraphics[width = \textwidth]{images/agn_structure.png}
 \end{center}
+More specifics on how this works and what angles to see, etc. in Lecture 16, slides 6-10.
 \subsection{AGN Luminosity}
 \begin{itemize}
     \item Accretion luminosity:
@@ -776,17 +777,41 @@ See Early Universe section below.
               \Omega_\Lambda = \frac{\rho_\Lambda}{\rho_c} = \frac{\Lambda c^2}{3 H^2} \tag{C\&O 29.118}
           \end{equation*}
     \item Total density parameter:
-    \begin{equation*}
-        \Omega \equiv \Omega_m + \Omega_{rel} + \Omega_\Lambda
-    \end{equation*}
-    where
-    \begin{center}
-        \includegraphics[height = 0.15 \textwidth]{images/total_density.png}
-    \end{center}
+          \begin{equation*}
+              \Omega \equiv \Omega_m + \Omega_{rel} + \Omega_\Lambda
+          \end{equation*}
+          where
+          \begin{center}
+              \includegraphics[height = 0.15 \textwidth]{images/total_density.png}
+          \end{center}
     \item Adding these results from the Wilkinson Microwave Anisotropy Probe reveals that $$\Omega_0 = \Omega_{m,0} + \Omega_{rel,0} + \Omega-{\Lambda,0} = 1.$$ that is, the universe is flat ($z = 0$), and dark energy now dominates the expansion of the universe.
 \end{itemize}
 \subsubsection{Acceleration of the Expansion}
-
+\begin{center}
+    \includegraphics[height = 0.4 \textwidth]{images/accel_exp.png}
+\end{center}
+\begin{itemize}
+    \item Universe is accelerating in its expansion
+    \item Expansion was decelerating until $z=0.76$ but it has been accelerating ever since
+    \item Source of acceleration is dark energy
+    \item Deceleration parameter $q(t)$: a useful dimensionless quantity that describes the acceleration of the universal expansion
+          \begin{equation*}
+              q(t) \equiv - \frac{R(t) [d^2 R (t)/dt^2]}{[dR(t)/dt]^2} \tag{C\&O 29.54}
+          \end{equation*}
+          which can also be written as
+          \begin{equation*}
+              q(t) = \frac{1}{2} \sum_i (1 + 3w_i) \Omega_i (t) \tag{C\&O 29.123}
+          \end{equation*}
+          where $w$ is the coefficient from the equation of state $P_i = w_i \rho_i c^2$ and the ``$i$'' subscript identifies one of the components of the universe. Using $w_m = 0$, $w_{rel} = 1/3$, and $w_\Lambda = -1$, we obtain
+          \begin{equation*}
+              q(t) = \frac{1}{2} \Omega_m (t) + \Omega_{rel} (t) - \Omega_\Lambda (t) \overset{\text{WMAP}}{=} -0.60 \tag{C\&O 29.124}
+          \end{equation*}
+          where the minus sign indicates that the expansion of the universe is now accelerating ($d^2R/dt^2 >0$)!
+\end{itemize}
+\subsubsection{Dominant Components of the Universe}
+\begin{center}
+    \includegraphics[height = 0.4\textwidth]{images/components.png}
+\end{center}
 \subsection{Distances (Observational Cosmology)}
 
 \backmatter
